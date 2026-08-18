@@ -1,0 +1,13 @@
+• groq/compound-mini
+• groq/compound
+• meta-llama/llama-prompt-guard-2-22m
+• meta-llama/llama-prompt-guard-2-86m
+• canopylabs/orpheus-arabic-saudi
+• qwen/qwen3.6-27b
+• whisper-large-v3
+• openai/gpt-oss-120b
+• whisper-large-v3-turbo
+• canopylabs/orpheus-v1-english
+• openai/gpt-oss-20b
+• openai/gpt-oss-safeguard-20b
+• allam-2-7b
