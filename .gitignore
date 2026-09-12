@@ -2,3 +2,5 @@
 .agents/
 .claude/
 __pycache__
+Mon-premier-LLM\.env
+

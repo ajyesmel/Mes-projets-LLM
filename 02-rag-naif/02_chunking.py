@@ -16,3 +16,4 @@ chunks = chunk_text(texte, chunk_size=200, overlap=50)
 for i, c in enumerate(chunks): 
     print(f"-----Chunk{i} -----\n{c}\n")
     
+    
