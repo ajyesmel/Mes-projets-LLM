@@ -6,11 +6,7 @@ load_dotenv()
 api_key = os.environ.get("GROQ_API_KEY", "").strip()
 
 
-def demander_au_llm(question: str, model: str = "groq/compound-mini") -> str:
-    """
-    Envoie une question au LLM (via Groq) et retourne sa réponse en texte.
-    En cas d'erreur, retourne un message explicite au lieu de planter.
-    """
+def demander_au_llm(messages: list, model: str = "groq/compound-mini") -> str:
     try:
         response = requests.post(
             "https://api.groq.com/openai/v1/chat/completions",
@@ -20,9 +16,7 @@ def demander_au_llm(question: str, model: str = "groq/compound-mini") -> str:
             },
             json={
                 "model": model,
-                "messages": [
-                    {"role": "user", "content": question}
-                ],
+                "messages": messages,
             },
             timeout=30,
         )
@@ -39,10 +33,4 @@ def demander_au_llm(question: str, model: str = "groq/compound-mini") -> str:
     except requests.exceptions.ConnectionError:
         return "❌ Impossible de se connecter — vérifie ta connexion internet."
     except Exception as e:
-        return f"❌ Erreur inattendue : {e}"
-
-
-# Test de la fonction
-if __name__ == "__main__":
-    reponse = demander_au_llm("Donne-moi 3 idées de projets pour apprendre les LLM.")
-    print(reponse) 
+        return f"❌ Erreur inattendue : {e}" 
