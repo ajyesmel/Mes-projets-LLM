@@ -3,4 +3,4 @@
 .claude/
 __pycache__
 Mon-premier-LLM\.env
-
+text-intelligence-api\.env
