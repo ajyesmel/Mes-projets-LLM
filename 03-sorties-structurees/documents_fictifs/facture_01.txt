@@ -1,0 +1,6 @@
+documents_fictifs/facture_01.txt
+Facture Scale2ai, montant 150000 FCFA, émise le 12 mars 2026.
+documents_fictifs/commande_01.txt
+Commande du client KOUASSI SARL : 10 imprimantes, 5 ordinateurs portables, passée le 3 février 2026.
+documents_fictifs/reclamation_01.txt
+Le client TRAORE se plaint d'un retard de livraison important depuis 3 jours, souhaite un remboursement rapide.
