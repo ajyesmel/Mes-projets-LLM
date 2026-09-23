@@ -1,5 +1,5 @@
 from models import Facture, BonDeCommande, Reclamation
-from extractor import extraire_document
+from extractor import extraire_document, comparer_a_reference
 import csv
 
 documents = [
@@ -15,7 +15,9 @@ for chemin, schema, nom in documents:
     resultat = extraire_document(texte, schema, nom)
     print(f"--- {nom} ---\n{resultat}\n")
     if resultat:
+        comparer_a_reference(nom, resultat)
         resultats.append({"type": nom, **resultat.model_dump()})
+    print()
 
 # Export vers CSV pour usage Excel/SQL
 if resultats:
@@ -23,4 +25,4 @@ if resultats:
     with open("extraction_resultats.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=cles)
         writer.writeheader()
-        writer.writerows(resultats)  
+        writer.writerows(resultats) 

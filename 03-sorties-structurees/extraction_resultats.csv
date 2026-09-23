@@ -1,3 +1,4 @@
-client,date,date_commande,devise,fournisseur,montant,numero_facture,produits,quantite_totale,type
-,12 mars 2026,,FCFA,Scale2ai,150000.0,,,,Facture
-KOUASSI SARL,,3 février 2026,,,,,"['imprimantes', 'ordinateurs portables']",15,BonDeCommande
+client,date,date_commande,devise,fournisseur,montant,numero_facture,objet,produits,quantite_totale,type,urgence
+,12 mars 2026,,FCFA,Scale2ai,150000.0,,,,,Facture,
+KOUASSI SARL,,3 février 2026,,,,,,"['imprimantes', 'ordinateurs portables']",15,BonDeCommande,
+TRAORE,,,,,,,retard de livraison,,,Reclamation,haute
