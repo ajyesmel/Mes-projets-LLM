@@ -26,3 +26,4 @@ if resultats:
         writer = csv.DictWriter(f, fieldnames=cles)
         writer.writeheader()
         writer.writerows(resultats) 
+        
