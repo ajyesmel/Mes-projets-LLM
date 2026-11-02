@@ -6,7 +6,7 @@ load_dotenv()
 api_key = os.environ.get("GROQ_API_KEY", "").strip()
 
 
-def demander_au_llm(messages: list, model: str = "groq/compound-mini") -> str:
+def demander_au_llm(messages: list, model: str = "meta-llama/llama-prompt-guard-2-22m") -> str:
     try:
         response = requests.post(
             "https://api.groq.com/openai/v1/chat/completions",
